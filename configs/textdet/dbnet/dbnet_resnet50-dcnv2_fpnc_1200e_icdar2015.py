@@ -16,15 +16,15 @@ icdar2015_textdet_test.pipeline = _base_.test_pipeline
 
 train_dataloader = dict(
     batch_size=16,
-    num_workers=8,
-    persistent_workers=True,
+    num_workers=0,
+    persistent_workers=False,
     sampler=dict(type='DefaultSampler', shuffle=True),
     dataset=icdar2015_textdet_train)
 
 val_dataloader = dict(
     batch_size=1,
-    num_workers=4,
-    persistent_workers=True,
+    num_workers=0,
+    persistent_workers=False,
     sampler=dict(type='DefaultSampler', shuffle=False),
     dataset=icdar2015_textdet_test)
 

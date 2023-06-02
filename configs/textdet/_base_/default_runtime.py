@@ -8,7 +8,7 @@ randomness = dict(seed=None)
 
 default_hooks = dict(
     timer=dict(type='IterTimerHook'),
-    logger=dict(type='LoggerHook', interval=5),
+    logger=dict(type='LoggerHook', interval=1),
     param_scheduler=dict(type='ParamSchedulerHook'),
     checkpoint=dict(type='CheckpointHook', interval=20),
     sampler_seed=dict(type='DistSamplerSeedHook'),
