@@ -12,8 +12,9 @@ _base_ = [
     '_base_crnn_mini-vgg.py',
 ]
 # dataset settings
-train_list = [_base_.icdar2015_textrecog_train]
-test_list = [_base_.icdar2015_textrecog_test]
+train_list = [_base_.mjsynth_textrecog_train]
+test_list = [_base_.mjsynth_textrecog_train]
+
 
 default_hooks = dict(logger=dict(type='LoggerHook', interval=50), )
 train_dataloader = dict(
