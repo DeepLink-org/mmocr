@@ -17,7 +17,7 @@ test_list = [_base_.icdar2015_textrecog_test]
 
 default_hooks = dict(logger=dict(type='LoggerHook', interval=50), )
 train_dataloader = dict(
-    batch_size=64,
+    batch_size=4,
     num_workers=0,
     persistent_workers=False,
     sampler=dict(type='DefaultSampler', shuffle=True),

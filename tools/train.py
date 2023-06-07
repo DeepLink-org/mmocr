@@ -107,12 +107,12 @@ def main():
         # build the default runner
         runner = Runner.from_cfg(cfg)
 
-        capture.insert_capture(runner)
     else:
         # build customized runner from the registry
         # if 'runner_type' is set in the cfg
         runner = RUNNERS.build(cfg)
 
+    capture.insert_capture(runner)
     # start training
     runner.train()
 
