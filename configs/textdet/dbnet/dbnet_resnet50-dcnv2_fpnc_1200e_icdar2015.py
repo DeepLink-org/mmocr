@@ -15,7 +15,7 @@ icdar2015_textdet_test = _base_.icdar2015_textdet_test
 icdar2015_textdet_test.pipeline = _base_.test_pipeline
 
 train_dataloader = dict(
-    batch_size=4,
+    batch_size=2,
     num_workers=0,
     persistent_workers=False,
     sampler=dict(type='DefaultSampler', shuffle=True),
