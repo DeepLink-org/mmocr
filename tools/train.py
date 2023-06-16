@@ -4,6 +4,8 @@ import logging
 import os
 import os.path as osp
 
+import capture
+
 from mmengine.config import Config, DictAction
 from mmengine.logging import print_log
 from mmengine.registry import RUNNERS
@@ -105,6 +107,8 @@ def main():
         # build customized runner from the registry
         # if 'runner_type' is set in the cfg
         runner = RUNNERS.build(cfg)
+
+    capture.insert_capture(runner)
 
     # start training
     runner.train()
